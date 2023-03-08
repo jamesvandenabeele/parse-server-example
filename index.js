@@ -8,13 +8,13 @@ const args = process.argv || [];
 const test = args.some(arg => arg.includes('jasmine'));
 
 //const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
-const databaseUri = 'mongodb+srv://heroku_4s2z08c3:ktdDTuMvoDCduScm@cluster-4s2z08c3.9ffxb.mongodb.net';
+const databaseUri = 'mongodb+srv://heroku_4s2z08c3:ktdDTuMvoDCduScm@cluster-4s2z08c3.9ffxb.mongodb.net/heroku_4s2z08c3';
 
 if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
 const config = {
-  databaseURI: databaseUri || 'mongodb+srv://heroku_4s2z08c3:ktdDTuMvoDCduScm@cluster-4s2z08c3.9ffxb.mongodb.net',
+  databaseURI: databaseUri || 'mongodb+srv://heroku_4s2z08c3:ktdDTuMvoDCduScm@cluster-4s2z08c3.9ffxb.mongodb.net/heroku_4s2z08c3',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'rBakd2Db5rupITJjE2SXq66a24rW4q6cIaGB9j4C',
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
