@@ -8,11 +8,11 @@ const args = process.argv || [];
 const test = args.some(arg => arg.includes('jasmine'));
 
 //const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
-/*
+const databaseUri = 'mongodb://test_user:Svw@zACG_6kPy38@cluster-4s2z08c3.9ffxb.mongodb.net';
+
 if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
-*/
 const config = {
   databaseURI: databaseUri || 'mongodb://test_user:Svw@zACG_6kPy38@cluster-4s2z08c3.9ffxb.mongodb.net',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
