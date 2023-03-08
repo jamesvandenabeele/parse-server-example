@@ -6,7 +6,7 @@ const Config = require('../../node_modules/parse-server/lib/Config');
 let parseServerState = {};
 const dropDB = async () => {
   await Parse.User.logOut();
-  const app = Config.get('test');
+  const app = Config.get('heroku_4s2z08c3');
   return await app.database.deleteEverything(true);
 };
 
